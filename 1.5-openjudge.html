@@ -1,0 +1,249 @@
+<script id="ch0105/01" type="">
+  var n = Number(prompt("输入学生人数(1 <= 人数 <= 100)",""))
+  var sum = 0
+  for (var i = 0; i < n; i++){
+    var age = Number(prompt("输入学生年龄(15 <= 年龄 <= 25)",""))
+    sum += age
+  }
+  var v_age = sum / n
+  console.log(v_age)
+</script>
+
+<script id="ch0105/02" type="">
+  var sum_money = 0
+  var avg_money = 0
+  for (var i = 0;i < 12;i++) {
+    var money = +prompt((i + 1) + "月的结余")
+    sum_money += money
+  }
+  avg_money = sum_money / 12
+  console.log("$" + avg_money.toFixed(2))
+</script>
+
+<script id="ch0105/03" type="">
+  var n = +(prompt("样本容量n(n < 100)",""))
+  var sum = 0
+  for (var i = 0; i < n; i++){
+    var m = Number(prompt("输入样本数据m(m <= 1000)",""))
+    sum += m
+  }
+  var avg = sum / n
+  console.log(avg.toFixed(4))
+</script>
+
+<script id="ch0105/04" type="">
+  var n = +(prompt("整数数量n(1 <= n <= 10000)",""))
+  var sum = 0
+  for (var i = 0; i < n; i++){
+    var m = Number(prompt("输入第" + (i + 1) + "个整数"))
+    sum += m
+  }
+  var avg = sum / n
+  console.log(sum + " " + avg.toFixed(5))      
+</script>
+
+<script id="ch0105/05" type="">
+  var n = +prompt()
+  var score
+  var currMax = 0
+
+  for (var i = 0; i < n; i++) {
+    score =+ prompt()
+    if (score > currMax) {
+      currMax = score
+    }
+  }
+  console.log(currMax)
+</script>
+
+<script id="ch0105/06" type="">
+  var n = +prompt()
+  var number
+  var currMax = -Infinity
+  var currMin = Infinity
+
+  for (var i = 0; i < n; i++) {
+    number =+ prompt()
+    if (number > currMax) {
+      currMax = number
+    }
+    if (number < currMin) {
+      currMin = number
+    }
+  }
+  console.log(currMax - currMin)
+</script>
+
+<script id="ch0105/07" type="">
+   var au = 0
+   var ag = 0
+   var cu = 0
+   var au_sum = 0
+   var ag_sum = 0
+   var cu_sum = 0
+   var sum = 0
+   var n = +prompt("比赛天数")
+
+   for (var i = 0; i < n; i++) {
+     au = +prompt("第" + (i + 1) + "天获得的金牌数:")
+     ag = +prompt("第" + (i + 1) + "天获得的银牌数:")
+     cu = +prompt("第" + (i + 1) + "天获得的铜牌数:")
+     au_sum += au
+     ag_sum += ag
+     cu_sum += cu
+   }
+   sum = au_sum + ag_sum + cu_sum
+   console.log(au_sum + " " + ag_sum + " " + cu_sum + " " + sum)
+</script>
+
+<script id="ch0105/08" type="">
+  var n = +prompt("输入n边形的边数(n>=3)")
+  var sum = (n - 2) * 180 //sum为n边形的内角和
+  var m = 0 //m为n-1个内角度数之和
+
+  for (var i = 0; i < n - 1; i++) {
+    var p = +prompt("第" + (i + 1) + "个内角的度数:")
+    m += p
+  }
+  console.log(sum - m)
+</script>
+
+<script id="ch0105/09" type="">
+  var m = +prompt("整数m(0 <= m <= n <= 300)为：")
+  var n = +prompt("整数n(0 <= m <= n <= 300)为：")
+  var sum_of_oddNumber = 0 //m 到 n（包括m 和 n ）之间的所有奇数的和
+
+  for (var i = m; i <= n; i++) {
+    if (i % 2 != 0) {
+      sum_of_oddNumber += i
+    }
+  }
+  console.log(sum_of_oddNumber)
+</script>
+
+<script id="ch0105/10" type="">
+  var m = +prompt("整数m(0 < m < n < 1000)为：")
+  var n = +prompt("整数n(0 < m < n < 1000)为：")
+  var sum = 0 //sum为正整数m和n之间（包括m和n）能被17整除的数之和
+
+  for (var i = m; i <= n; i++) {
+    if (i % 17 === 0) {
+      sum += i
+    }
+  }
+  console.log(sum)
+</script>
+  
+<script id="ch0105/11" type="">
+  var sum_of_1 = 0 //1出现的总次数
+  var sum_of_5 = 0 //5出现的总次数
+  var sum_of_10 = 0 //10出现的总次数
+  var k = +prompt("正整数的个数为:")
+
+  for (var i = 0; i < k; i++) {
+    var n = +prompt("输入第" + (i + 1) + "个整数")
+    if (n + 1 == 2) {
+      sum_of_1++
+    }
+    if (n + 1 == 6) {
+      sum_of_5++
+    }
+    if (n + 1 == 11) {
+      sum_of_10++
+    }
+  }
+  console.log(sum_of_1 + " " + sum_of_5 + " " + sum_of_10)
+</script>
+
+<script id="ch0105/12" type="">
+  var n = +prompt("指定整数的个数N(N <= 100):")
+  var m = +prompt("整数m为:")
+  var count = 0
+
+  for (var i = 0; i < n; i++) {
+    var x = +prompt("输入第" + (i + 1) + "个整数")
+    if (x == m) {
+      count++
+    }
+  }
+  console.log(count)
+</script>
+
+<script id="ch0105/13" type="">
+  var a = +prompt("底数a(-1000000 <= a <= 1000000)为:")
+  var n = +prompt("指数n为:")
+  var power = 1//幂(power)
+
+  for (var i = 0; i < n; i++) {
+    power *= a
+  }
+  console.log(power)
+</script>
+
+<script id="ch0105/14" type="">
+  var x = +prompt("人口基数x(1 <= x <= 100)为:")
+  var n = +prompt("年数n为:")
+
+  for (var i = 0; i < n; i++) {
+    x = x + x * 0.001
+  }
+  console.log( x.toFixed(4))
+</script>
+
+<script id="ch0105/15" type="">
+  var r = 1 + (+prompt() * 0.01)
+  var m = +prompt("投资的金额M(100 <= M <= 1000000)为:")
+  var y = +prompt("年数Y为:")
+
+  for (var i = 0; i < y; i++) {
+    m = m * r
+  }
+  console.log( m.toFixed(0))
+</script>
+
+<script id="ch0105/16" type="">
+</script>
+
+<script id="ch0105/17" type="">
+  var k = Number(prompt("输入一个正整数k(1 <= k <= 46)",""))
+  var ac1 = 1, ac2 = 1;
+  if (k == 1 || k == 2) {
+    console.log(ac1)
+  }
+  for (var i = 2; i < k; i++){
+        [ac1, ac2] = [ac2, ac1 + ac2];
+  }
+  console.log(ac2)
+</script>
+
+<script id="ch0105/18" type="">
+  var n = +prompt("整数n(1 < n <= 20)")
+  var x = 0, y = 0
+  x = (1 / +prompt()) * (+prompt())
+
+  for (var i = 0; i < n - 1; i++) {
+    y = (1 / +prompt()) * (+prompt())
+    if (y - x > 0.05) {
+      console.log("better")
+    } else if (x - y > 0.05) {
+      console.log("wrose")
+    } else {
+      console.log("samne")
+    }
+  }
+</script>
+
+<script id="ch0105/21" type="">
+  var n = +prompt("正整数N = ")
+  var e = "even"
+  var o = "odd"
+???
+  for (var i = 0;i < 10 ; i++) {
+    switch (n % 2) {
+      case (n % 2 == 0):
+      console.log(e)
+      case (n % 2 != 0):
+      console.log(o)
+    }
+  }
+</script>

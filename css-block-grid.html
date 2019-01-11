@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css-block-grid</title>
+  <!-- rel代表关系(relation)，href(样式表的URL)，) -->
+  <link rel="stylesheet" type="text/css" href="" media="all"> 
+  <style type="text/css">
+    *{
+      box-sizing:border-box;
+    }
+    ul {
+      list-style-type:none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background-color:#FAFAFA;
+      width: 50px;
+      height: 50px;
+      border: 1px solid;
+    }
+
+    li:nth-child(n+4) {
+      margin-left:50px;
+    }
+
+    li:nth-child(n+7) {
+      margin-left:100px;
+    }
+
+    li:nth-child( 3n+ 4) {
+      margin-top: -150px;
+    }
+
+    div {
+      height:100%;
+    }
+    div:hover {
+      background-color:#2ca9e1;
+      margin-right:-10px;
+      margin-left:-10px;
+      margin-top:-10px;
+      height:calc(100% + 20px);
+      position:relative;
+      z-index:8;
+    }
+  </style>
+</head>
+<body>
+ <ul>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+   <li><div></div></li>
+ </ul>
+</body>
+</html>
